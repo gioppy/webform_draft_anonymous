@@ -1,0 +1,5 @@
+name = Webform Draft Anonymous
+description = Save draft webform submission on back/next multistef form for anonymous users.
+core = 7.x
+dependencies[] = webform
+dependencies[] = webform_draft_authlink

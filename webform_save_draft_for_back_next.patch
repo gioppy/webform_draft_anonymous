@@ -1,0 +1,13 @@
+diff --git a/webform.module b/webform.module
+index 571396e..1ab270b 100644
+--- a/webform.module
++++ b/webform.module
+@@ -3229,7 +3229,7 @@ function webform_client_form_pages($form, &$form_state) {
+ 
+   // Inform the submit handlers that a draft will be saved.
+   $form_state['save_draft'] = in_array($form_state['values']['op'], array($draft_op, '__AUTOSAVE__')) ||
+-                              ($node->webform['auto_save'] && !$form_state['values']['details']['finished'] && !$form_state['webform_completed'] && user_is_logged_in());
++                              ($node->webform['auto_save'] && !$form_state['values']['details']['finished'] && !$form_state['webform_completed']);
+ 
+   // Determine what we need to do on the next page.
+   if (!empty($form_state['save_draft']) || !$form_state['webform_completed']) {
